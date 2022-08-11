@@ -40,40 +40,42 @@
 
 //promise
 
- new Promise(function(resolve,reject){
-    setTimeout(()=>resolve(1),1000)
-}).then(function(result){console.log(result)  
-    return new Promise((resolve, reject) => { // (*)
-    setTimeout(() => resolve(result * 2), 1000);
-  });
-}).then(function(result){console.log (result) 
-    return new Promise((resolve,reject) => {
-    setTimeout(()=> resolve(result * 2),2000)
-    })
-}).then(function(result){
-    console.log (result)
-})//1 2 4
-
-//promise error handling
-new Promise(function(resolve,reject){
-    setTimeout(()=>{
-        reject(new Error('Whoops'))
-    },1000)
-}).catch(function(err){
-    console.log("The error is handled, continue normally")
-}).then(() => console.log("Next successful handler runs"))
-
-//async/await
+//  new Promise(function(resolve,reject){
+//     setTimeout(()=>resolve(1),1000)
+// }).then(function(result){console.log(result)  
+//     return new Promise((resolve, reject) => { // (*)
+//     setTimeout(() => resolve(result * 2), 1000);
+//   });
+// }).then(function(result){console.log (result) 
+//     return new Promise((resolve,reject) => {
+//     setTimeout(()=> resolve(result * 2),2000)
+//     })
+// }).then(function(result){
+//     console.log (result)
+// })//1 2 4
 
 
-async function func(){
-    let promise = new Promise((resolve,reject)=>{
-        setTimeout(()=>resolve('done'),1000)
-    });
-    let result = await promise;
-    console.log(result)
-}
-func()
+
+// //promise error handling
+// new Promise(function(resolve,reject){
+//     setTimeout(()=>{
+//         reject(new Error('Whoops'))
+//     },1000)
+// }).catch(function(err){
+//     console.log("The error is handled, continue normally")
+// }).then(() => console.log("Next successful handler runs"))
+
+// //async/await
+
+
+// async function func(){
+//     let promise = new Promise((resolve,reject)=>{
+//         setTimeout(()=>resolve('done'),1000)
+//     });
+//     let result = await promise;
+//     console.log(result)
+// }
+// func()
 
 //
 
@@ -108,23 +110,25 @@ function person2(money){
     })
 }
 
-async function func(){
-    try{
-        const res1 = await person1(12);
-        const res2 = await person2(90000);
-        console.log(res1, res2)
-    }catch(err){
-        console.log(err)
-    }
-}
-func()
+// async function func(){
+//     try{
+//         const res1 = await person1(12);
+//         const res2 = await person2(90000);
+//         console.log(res1, res2)
+//     }catch(err){
+//         console.log(err)
+//     }
+// }
+// func()
 //promise.All
 
-Promise.all([person1(9),person2(90000)])
-.then(([res1,res2])=>{console.log(res1,res2)})
+Promise.all([person1(12),person2(19222200)])
+.then(console.log)
 .catch(err=>{console.log(err)})
 
 
+
+  
 
 
 
