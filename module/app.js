@@ -1,6 +1,6 @@
 import module, {HTML,PHP,CSS,User} from "./module.js";
 //import  {default as module, HTML,PHP,CSS,User} from "./module.js";
-//sử dụng asđể nhập dưới các tên khác nhau.
+
 
 module()
 console.log(HTML,PHP,CSS)

@@ -1,17 +1,17 @@
 // class Declaration
-// class language{
-//     constructor(english,japanese){
-//         this.english = english
-//         this.japanese = japanese
-//     }
-// }
+class language{
+    constructor(english,japanese){
+        this.english = english
+        this.japanese = japanese
+    }
+}
 // //class Expression
-// let language = class language{
-//     constructor(english,jananese){
-//         this.english = english
-//         this.japanese = jananese
-//     }
-// }
+let language = class language{
+    constructor(english,jananese){
+        this.english = english
+        this.japanese = jananese
+    }
+}
 
 
 
